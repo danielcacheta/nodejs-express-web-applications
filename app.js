@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
   // res.send('Hello from my library app');
   // res.sendFile(__dirname + '/views/index.html');
   // res.sendFile(path.join(__dirname, 'views', 'index.html'));
-  res.render('index'); // rederizar uma view que chame 'index'
+  res.render('index', { list: ['a', 'b'] }); // rederizar uma view que chame 'index'
 });
 
 app.listen(port, () => {
