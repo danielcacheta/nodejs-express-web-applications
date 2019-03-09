@@ -8,6 +8,8 @@ var app = express();
 
 app.use(morgan('tiny'));
 
+app.use(express.static(path.join(__dirname, '/public/')))
+
 app.get('/', (req, res) => {
     // res.send('Hello from my library app');
     // res.sendFile(__dirname + '/views/index.html');
