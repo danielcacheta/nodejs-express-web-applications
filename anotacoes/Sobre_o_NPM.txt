@@ -29,3 +29,5 @@ Instalar a extensão ESLint vai fazer com que as configs de lint integrem ao VSC
 É possível corrigr automaticamente os erros apontados pelo ESLint:
 ./node_modules/.bin/eslint app.js --fix
 Este comando não corrige os warnings
+
+EJS tem uma extensão para interpretar os comandos (.ejs do Qassim Farid)
