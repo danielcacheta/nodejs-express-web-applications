@@ -1,0 +1,15 @@
+Instalar NVM
+https://github.com/creationix/nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+
+
+nvm install 9.5
+nvm install --lts (para o latest)
+nvm use 8.9.4
+(funciona para a sessão atual do terminal)
+
+nvm alias default 9.5
+nvm install --lts
+nvm alias default (número da lts listada pelo install)
+(funciona para novas sessões do terminal)
+

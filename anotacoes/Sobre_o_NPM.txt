@@ -1,0 +1,27 @@
+express ^4.13.3 => significa o mesmo que ^4.xx.x, ou seja, permite qualquer versão dentro do major (4)
+express ~4.13.3 => ~ é mais restritivo, ignora só o último parâmetro (minor version): 4.13.x
+express 4.13.3 => não importa se existe nova versão, não vai atualizar
+
+
+morgan: printar no console informações de rotas acessadas. opções combined para mostrar tudo e tiny para mostrar resumido:
+
+var morgan = require('morgan');
+app.use(morgan('tiny'));
+
+debug: apresenta no console apenas quando starta a aplicação com o comando de DEBUG=* node app.js
+var debug = require('debug')('app'); (este app permite definir contextos para a hora de startar DEBUG=* ou DEBUG=contexto_especifico)
+
+No código, ao invés de console.log usar:
+debug(`Message from DEBUG: Listening on port ${chalk.green("3000")}`)
+
+ESLINT instalado globalmente
+
+eslint --init para configurar o eslint no projeto
+
+Style Guide do AirBnb
+
+Para rodar a análise de código, chamar o eslint local do projeto: ./node_modules/.bin/eslint app.js
+OU:
+configurar no package.json um script "lint" que rode como "eslint app.js". Isso já faz usar a versão local ao invés da global.
+Rodar com npm run lint
+Instalar a extensão ESLint vai fazer com que as configs de lint integrem ao VSCode
