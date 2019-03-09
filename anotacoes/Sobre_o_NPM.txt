@@ -25,3 +25,7 @@ OU:
 configurar no package.json um script "lint" que rode como "eslint app.js". Isso já faz usar a versão local ao invés da global.
 Rodar com npm run lint
 Instalar a extensão ESLint vai fazer com que as configs de lint integrem ao VSCode
+
+É possível corrigr automaticamente os erros apontados pelo ESLint:
+./node_modules/.bin/eslint app.js --fix
+Este comando não corrige os warnings
