@@ -17,10 +17,14 @@ app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  // res.send('Hello from my library app');
-  // res.sendFile(__dirname + '/views/index.html');
-  // res.sendFile(path.join(__dirname, 'views', 'index.html'));
-  res.render('index', { list: ['a', 'b'], title: 'Library' }); // rederizar uma view que chame 'index'
+  res.render(
+    'index',
+    {
+      nav: [{ link: '/books', title: 'Books' },
+        { link: '/authors', title: 'Authors' }],
+      title: 'Library'
+    }
+  ); // rederizar uma view que chame 'index'
 });
 
 app.listen(port, () => {
